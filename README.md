@@ -39,7 +39,7 @@ https://spreadsheets.google.com/feeds,https://www.googleapis.com/auth/drive,http
 #### Download and Import
 - Download GoogleSheetsHookAPI.zip
 - Download the migrations.properties file, and edit it to replace the <replace this with your key> text with the "Container Key" of the ND or ND cluster in your target PM.
-    - the container key is found by going to the "Deatils Tab" of the ND cluster, or ND defined in the Policy Manager Console, then looking at the " Container Overview" tab on that page, and copying the "Container Key:" value. ![container key screenshot](https://github.com/pogo61/Google-Sheets-API-Integration/blob/master/Screen%20Shot%202015-03-18%20at%2011.24.45%20am.png "ND Container Key")
+    - the container key is found by going to the "Deatils Tab" of the ND cluster, or ND defined in the Policy Manager Console, then looking at the " Container Overview" tab on that page, and copying the "Container Key:" value. ![container key screenshot](https://github.com/AkanaInc/Google-Sheets-API-Integration/blob/master/Screen%20Shot%202015-03-18%20at%2011.24.45%20am.png "ND Container Key")
 - Login to PolicyManager  example: http://localhost:9900
 - Select the root "Registry" organisation and click on the "Import Package" from the Actions navigation window on the right side of the screen
   - click on button to browse for the GoogleSheetsHookAPI.zip archive file 
@@ -122,19 +122,19 @@ However, you can see that the "/helloworld" operation has no parameters, but the
 
 Go to the Google_Sheets_API_Hook VS -> Operations Tab -> GET /hellowworld operation -> Process tab you'll see this image:
 ![Helloworld process] 
-(https://github.com/pogo61/Google-Sheets-API-Hook/blob/master/Hello%20World%20Process.png)
+(https://github.com/AkanaInce/Google-Sheets-API-Hook/blob/master/Hello%20World%20Process.png)
 
 Double click on the Script activity and the invoke activity to see how these work to make the Hello World operation call successful.
 
 
 ### Create Your Own Integration with the Google Sheets API
 The Hello World operation is one simple way of integrating or extending your API's.
-Take a look at the [Google Sheets API Integration](https://github.com/pogo61/Google-Sheets-API-Integration).
+Take a look at the [Google Sheets API Integration](https://github.com/AkanaInc/Google-Sheets-API-Integration).
 this will give you a deeper inderstanding of the richness of our gateway product in integrating to API's    
 
 ### Modify and Build
 In the event you need to change the API Hook.   Here are the instructions to do so. 
 
 ### License
-Put a link to an open source license
+Apache 2.0 License (https://github.com/AkanaInc/Google-Sheets-API-Hook/blob/master/Hello%20World%20Process.png)
 
