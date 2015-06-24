@@ -131,7 +131,7 @@ However, you can see that the "/helloworld" operation has no parameters, but the
 
 Go to the Google_Sheets_API_Hook VS -> Operations Tab -> GET /hellowworld operation -> Process tab you'll see this image:
 ![Helloworld process] 
-(https://github.com/AkanaInce/Google-Sheets-API-Hook/blob/master/Hello%20World%20Process.png)
+(https://github.com/AkanaInc/Google-Sheets-API-Hook/blob/master/Hello%20World%20Process.png)
 
 Double click on the Script activity and the invoke activity to see how these work to make the Hello World operation call successful.
 
