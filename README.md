@@ -5,12 +5,12 @@
 
 ## Google Sheets API 
 ### About the API
-- CRUD spreadsheets on Google Drive
+- CRUD spreadsheets on Google Sheets
 - Home Page: [Google Sheets API docs] (https://developers.google.com/google-apps/spreadsheets/)
 - API Documentation: [Google Sheets API docs] (https://developers.google.com/google-apps/spreadsheets/)
 
 ### Pre-Reqs
-- you must install the pso extensions custom polices:
+- You must install the pso extensions custom polices:
     + unzip the com.soa.pso.openapi.extensions_7.2.2.zip (available in this repository) into the <Policy Manager Home>/sm70 directory. This will result in files placed in the sm70/lib/pso.opeapi.extensions_7.2.2 subdirectory
     + restart both PM and ND(s)
     + Using the SOA Admin Console, install the following features in each PM container:
@@ -18,7 +18,7 @@
         * SOA Professional Services OpenAPI Extensions UI
     + Using the SOA Admin Console, install the following features in each ND container:
         * SOA Professional Services OpenAPI Extensions
-- you must install the com.soa.pso.policy.JWTToken_1.0.0.zip nto the <Policy Manager Home>/sm70 directory. This will result in files placed in the sm70/lib/pso.policy.JWTToken_1.0.0 subdirectory
+- You must install the com.soa.pso.policy.JWTToken_1.0.0.zip nto the <Policy Manager Home>/sm70 directory. This will result in files placed in the sm70/lib/pso.policy.JWTToken_1.0.0 subdirectory
     + restart ND(s) only
     +  Using the SOA Admin Console, on each ND:
         * select the Insert JWT as HTTP Header Policy Handler feature  
@@ -26,14 +26,20 @@
         * follow the install wizard instructions and restart the ND
 - This will only work for [Google Apps for work] (https://www.google.com/intx/en_au/work/apps/business/?utm_source=google&utm_medium=cpc&utm_campaign=japac-smb-apps-bkws-au-en&utm_content=gafb&utm_term=google%20apps&gclid=CPGWm82o5cMCFU06vAod9kcAOA&gclsrc=ds). You, or your organisation, must have a subscription to this service. The reason for this is that this is the only service that Google provides 2-legged OAuth to (via a service account). Google uses only 3-legged OAuth with its free and open Google Docs. 3-legged OAuth is unsuitable to server to server integration.
 - Register the application in the [Google Developers Console] (https://console.developers.google.com/). Creating an account if you have not already registered.
-- once the Project is defined, double click on it to be taken the the Project details page. 
-- Click on the "Credentials" left hand menu item
-- When the Credentials Portlet is displaid, click on the "Create new Client ID" button. then select the "Service Acccount" for the CLient ID type. (note: you must be the Google Apps sdministrator to do this).
-- once this is done you should have a new section in the Credentials Portlet for the Service Account.
-- Copy the clientId of the Service Account
-- login to the  [Google Apps for work Admin Console] (https://admin.google.com) select the security icon, scroll to the botom of the admin page and select the "Show more" link, select the "Advanced Settings" link that appears, then the "Manage API client access" link.
-- in the "Client Name" field paste the Service Account ClientId you coppied, then copy this list of API scopes into the Scopes field and click the "Authorize" button:
-https://spreadsheets.google.com/feeds,https://www.googleapis.com/auth/drive,https://www.googleapis.com/auth/drive.appdata,https://www.googleapis.com/auth/drive.apps.readonly,https://www.googleapis.com/auth/drive.file,https://www.googleapis.com/auth/drive.metadata.readonly,https://www.googleapis.com/auth/drive.readonly 
+    - Once the Project is defined, double click on it to be taken the the Project details page. 
+    - Click on the "Credentials" left hand menu item
+    - When the Credentials Portlet is displaid, click on the "Create new Client ID" button. then select the "Service Acccount" for the CLient ID type. (note: you must be the Google Apps sdministrator to do this).
+    - Once this is done you should have a new section in the Credentials Portlet for the Service Account.
+    - Copy the clientId of the Service Account you will use this later
+- Login to the  [Google Apps for work Admin Console] (https://admin.google.com) select the security icon, scroll to the botom of the admin page and select the "Show more" link, select the "Advanced Settings" link that appears, then the "Manage API client access" link.
+- In the "Client Name" field paste the Service Account ClientId you coppied, then copy this list of API scopes into the Scopes field and click the "Authorize" button:
+    - https://spreadsheets.google.com/feeds
+    - https://www.googleapis.com/auth/drive
+    - https://www.googleapis.com/auth/drive.appdata
+    - https://www.googleapis.com/auth/drive.apps.readonly
+    - https://www.googleapis.com/auth/drive.file
+    - https://www.googleapis.com/auth/drive.metadata.readonly
+    - https://www.googleapis.com/auth/drive.readonly 
 
 ### Getting Started Instructions
 #### Download and Import
@@ -72,8 +78,10 @@ https://spreadsheets.google.com/feeds,https://www.googleapis.com/auth/drive,http
 
 #### Verify Connectivity
 - Using curl http://"URL of the Listener of your ND"/sheets_hook/helloworld
--  the response should be similar to the below, listing your spreadsheets:  
-    ```<feed xmlns="http://www.w3.org/2005/Atom" xmlns:openSearch="http://a9.com/-/spec/opensearchrss/1.0/">
+-  the response should be similar to the below, listing your spreadsheets: 
+
+    ```
+    <feed xmlns="http://www.w3.org/2005/Atom" xmlns:openSearch="http://a9.com/-/spec/opensearchrss/1.0/">
         <id>https://spreadsheets.google.com/feeds/spreadsheets/private/full</id>
         <updated>2015-03-17T02:16:48.634Z</updated>
         <category scheme="http://schemas.google.com/spreadsheets/2006" term="http://schemas.google.com/spreadsheets/2006#spreadsheet"/>
@@ -97,7 +105,8 @@ https://spreadsheets.google.com/feeds,https://www.googleapis.com/auth/drive,http
                 <email>paulpog@japarasolutions.com</email>
             </author>
         </entry>
-    </feed>```
+    </feed>
+    ```
 
 ### How Hello World Works
 #### An Akana Integration Primer
@@ -142,7 +151,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
