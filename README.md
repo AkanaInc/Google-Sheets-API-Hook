@@ -45,7 +45,8 @@
 #### Download and Import
 - Download GoogleSheetsHookAPI.zip
 - Download the migrations.properties file, and edit it to replace the <replace this with your key> text with the "Container Key" of the ND or ND cluster in your target PM.
-    - the container key is found by going to the "Deatils Tab" of the ND cluster, or ND defined in the Policy Manager Console, then looking at the " Container Overview" tab on that page, and copying the "Container Key:" value. ![container key screenshot](https://github.com/AkanaInc/Google-Sheets-API-Hook/blob/master/migrationprop.png "ND Container Key")
+    - the container key is found by going to the "Deatils Tab" of the ND cluster, or ND defined in the Policy Manager Console, then looking at the " Container Overview" tab on that page, and copying the "Container Key:" value. 
+     ![container key screenshot](https://github.com/AkanaInc/Google-Sheets-API-Hook/blob/master/migrationprop.png "ND Container Key")
 - Login to PolicyManager  example: http://localhost:9900
 - Select the root "Registry" organisation and click on the "Import Package" from the Actions navigation window on the right side of the screen
   - click on button to browse for the GoogleSheetsHookAPI.zip archive file 
